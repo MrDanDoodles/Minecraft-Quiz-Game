@@ -18,20 +18,24 @@ FILE_LOCATION = "C:\\Users\\1211d\\Desktop\\Computer Science\\Personal Projects\
 
 #   Program Loop
 while appOn:
-    qh = question_handler() #Creating the QH object
+    qh = question_handler(FILE_LOCATION) #Creating the QH object
     #Prompting Question
     print("What would you like to do?\nCreate a Database (CD) | Update a Database (UD) | Finished (OFF): ") 
     choice = str(input().upper())
     
     #Checking Choice
     if choice == "CD":      #Create Database
+        os.system('cls')
         #Naming JSON file
-        name = ""
         name = str(input("Name of your file: "))
-        qh.create_database(name.lower(), FILE_LOCATION) #Creates the Database
+        qh.create_database(name.lower()) #Creates the Database
 
     elif choice == "UD":    #Update Database
-        print("You chose to UPDATE a database!")
+        os.system('cls')
+        #Getting the right file
+        file_name = str(input("What is the name of your file?: ").lower())
+        qh.update_database(file_name)
+
 
     elif choice == "OFF":   #Turning App Off
         print("App will be turned off!")
