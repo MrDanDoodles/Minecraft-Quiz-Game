@@ -1,0 +1,114 @@
+﻿<Window x:Class="MinecraftQuizGame.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MinecraftQuizGame"
+        mc:Ignorable="d"
+        Title="Minecraft Quiz Game" Height="720" Width="1280"
+        Icon="C:\Users\1211d\Desktop\Computer Science\Personal Projects\C#\Minecraft Quiz Game\Images\Minecraft_Logo.png" Background="Transparent"
+        ResizeMode="NoResize"
+        >
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="100"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="110"/>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+
+        <!-- IMAGES & BACKGROUND -->
+
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\1211d\Desktop\Computer Science\Personal Projects\C#\Minecraft Quiz Game\Images\Minecraft_Dirt_Backround_Dark.png"
+                        TileMode="Tile"
+                        Stretch="UniformToFill"
+                        ViewportUnits="Absolute"
+                        Viewport="0,0,600,600"/>
+        </Grid.Background>
+
+        <Image Width="670" Height="100"
+               Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="3"
+               Source="C:\Users\1211d\Desktop\Computer Science\Personal Projects\C#\Minecraft Quiz Game\Images\Minecraft_Stone_Logo.png"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"
+               Stretch="Uniform"
+               />
+
+        <!-- End Background and Images -->
+        <!-- TEXT BLOCKS -->
+
+        <TextBlock Grid.Row="7" Grid.ColumnSpan="4"
+                   Text="Minecraft Quiz Game - Beta 1.0"
+                   FontSize="25"
+                   Foreground="White"
+                   VerticalAlignment="Top"
+                   FontFamily="Minecraft Regular" Margin="0,60,0,0"/>
+
+        <TextBlock Grid.Row="7" Grid.Column="5" Grid.ColumnSpan="2"
+                   Text="Project by Danielle Rodriguez" FontSize="25"
+                   Foreground="White" FontFamily="Minecraft Regular"
+                   VerticalAlignment="Top" Margin="-85,60,0,0"/>
+
+        <TextBlock Grid.Column="3" Grid.Row="1" Grid.ColumnSpan="3"
+                   Text="Quiz Game" FontSize="40" x:Name="yellowMenuText"
+                   FontFamily="Minecraft Regular" Foreground="Yellow" Margin="498,46,0,0" RenderTransformOrigin="0.5,0.5"
+                   VerticalAlignment="Top" HorizontalAlignment="Left"
+                   >
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-15.969"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+
+        <!-- End Text Blocks-->
+        <!-- BUTTONS -->
+
+        <Button Grid.Row="3" Grid.Column="3" Click="PlayGameClick">
+            <Button.Background>
+                <ImageBrush ImageSource="C:\Users\1211d\Desktop\Computer Science\Personal Projects\C#\Minecraft Quiz Game\Images\Stone3.png"
+                            TileMode="Tile" Stretch="Uniform"
+                            ViewportUnits="Absolute" Viewport="0,0,100,100"/>
+            </Button.Background>
+            <Button.Foreground>
+                <ImageBrush ImageSource="C:\Users\1211d\Desktop\Computer Science\Personal Projects\C#\Minecraft Quiz Game\Images\stone.png"/>
+            </Button.Foreground>
+            <TextBlock Text="Play Game" FontSize="30"
+                       Foreground="White" FontFamily="Minecraft Regular"/>
+        </Button>
+
+        <Button Grid.Row="5" Grid.Column="3">
+            <Button.Background>
+                <ImageBrush ImageSource="C:\Users\1211d\Desktop\Computer Science\Personal Projects\C#\Minecraft Quiz Game\Images\stone3.png"
+                            TileMode="Tile" Stretch="Uniform"
+                            ViewportUnits="Absolute" Viewport="0,0,100,100"/>
+            </Button.Background>
+            <Button.Foreground>
+                <ImageBrush ImageSource="C:\Users\1211d\Desktop\Computer Science\Personal Projects\C#\Minecraft Quiz Game\Images\Stone.png"/>
+            </Button.Foreground>
+            <TextBlock Text="Questions" FontSize="30"
+           Foreground="White" FontFamily="Minecraft Regular"/>
+        </Button>
+
+        <!-- End Buttons -->
+    </Grid>
+</Window>
